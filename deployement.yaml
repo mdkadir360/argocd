@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: nginx
+        image: mdkadir360/microui20may:latest
 
         ports:
         - containerPort: 80
