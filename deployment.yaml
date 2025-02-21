@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: microtodoui:latest                   //    mdkadir360/netflix:latest
+        image: kadiracr25/microtodoui:latest                   //    mdkadir360/netflix:latest
 
         ports:
         - containerPort: 80
