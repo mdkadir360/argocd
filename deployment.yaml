@@ -5,7 +5,6 @@ metadata:
 spec:
   replicas: 4
   selector:
-  
     matchLabels:
       app: myapp
   template:
@@ -15,7 +14,9 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: kadiracr25/microtodoui:latest                   //    mdkadir360/netflix:latest
-
+        image: kadiracr25.azurecr.io/microtodoui:latest  # Correct ACR image format
         ports:
         - containerPort: 80
+        imagePullPolicy: Always  # Ensures the latest image is always pulled
+      imagePullSecrets:
+      - name: acr-secret  # Reference to the ACR secret
